@@ -2,9 +2,10 @@ package DataStructures;
 import java.util.EmptyStackException;
 
 public class Stack {
-    private double[] elemetsOfStack;
-    private int head = -1;
+    private double[] elemetsOfStack; //array that exist all elements of stack
+    private int head = -1; //number of stack`s head
 
+    //constructor
     public Stack(int size){
         elemetsOfStack = new double[size];
     }

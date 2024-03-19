@@ -2,9 +2,10 @@ package DataStructures;
 import java.util.EmptyStackException;
 
 public class Queue {
-    private String[] elemetsOfQueue;
-    private int tail = -1;
+    private String[] elemetsOfQueue; //array that exist all elements of queue
+    private int tail = -1; //number of queue`s head
 
+    //constructor
     public Queue(int size) {
         elemetsOfQueue = new String[size];
     }
