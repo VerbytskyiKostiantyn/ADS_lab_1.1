@@ -15,9 +15,22 @@ public class Main {
 
         //create with random elements and print queue
         Queue queue = new Queue(lengthOfQueue);
+        int curInt;
+        String curString = null;
         System.out.print("\n");
         for (int i = 0; i < lengthOfQueue; i++) {
-            queue.Add(random.nextInt(400));
+            boolean f = false;
+            while(!f) {
+                curInt = random.nextInt(400);
+                curString = Integer.toString(curInt);
+                if(!curString.contains("8") && !curString.contains("9")){
+                    f = true;
+                }
+            }
+            curString = "0" + curString;
+
+            queue.Add(curString);
+
             System.out.print(queue.GetTail() + "  ");
         }
 

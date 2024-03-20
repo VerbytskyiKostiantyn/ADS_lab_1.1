@@ -29,14 +29,17 @@ public class Queue {
     }
 
     //add element to queue
-    public boolean Add(int element) {
+    public boolean Add(String element) {
         if (isFull()) {
             return false;
         }
 
-        String octalNumber = Integer.toString(element, 8);
+        if (!(element.charAt(0) == '0')){
+            throw new RuntimeException();
+        }
+
         tail++;
-        elemetsOfQueue[tail] = octalNumber;
+        elemetsOfQueue[tail] = element;
 
         return true;
     }
